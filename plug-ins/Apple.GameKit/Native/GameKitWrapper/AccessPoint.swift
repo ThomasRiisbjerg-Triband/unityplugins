@@ -98,9 +98,9 @@ public func GKAccessPoint_GetIsFocused
 @_cdecl("GKAccessPoint_SetIsFocused")
 public func GKAccessPoint_SetIsFocused
 (
-    pointer: UnsafeMutableRawPointer
+    pointer: UnsafeMutableRawPointer,
     value: Bool
-) -> Bool
+)
 {
     #if os(tvOS)
     let target = Unmanaged<GKAccessPoint>.fromOpaque(pointer).takeUnretainedValue();
