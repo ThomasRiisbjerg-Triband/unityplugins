@@ -144,6 +144,8 @@ namespace Apple.GameKit
         #region IsFocused
         [DllImport(InteropUtility.DLLName)]
         private static extern bool GKAccessPoint_GetIsFocused(IntPtr pointer);
+        [DllImport(InteropUtility.DLLName)]
+        private static extern void GKAccessPoint_SetIsFocused(IntPtr pointer, bool isFocused);
 
         /// <summary>
         /// A Boolean value that indicates whether the access point is in focus on tvOS.
@@ -151,6 +153,7 @@ namespace Apple.GameKit
         public bool IsFocused
         {
             get => GKAccessPoint_GetIsFocused(Pointer);
+            set => GKAccessPoint_SetIsFocused(Pointer, value);
         }
         #endregion
 #endif
