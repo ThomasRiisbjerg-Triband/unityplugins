@@ -140,7 +140,6 @@ namespace Apple.GameKit
         }
         #endregion
         
-#if UNITY_TVOS
         #region IsFocused
         [DllImport(InteropUtility.DLLName)]
         private static extern bool GKAccessPoint_GetIsFocused(IntPtr pointer);
@@ -156,7 +155,6 @@ namespace Apple.GameKit
             set => GKAccessPoint_SetIsFocused(Pointer, value);
         }
         #endregion
-#endif
         
         #region Trigger
         [DllImport(InteropUtility.DLLName)]
